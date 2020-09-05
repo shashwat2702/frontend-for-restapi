@@ -6,6 +6,7 @@ const Label = styled.label`
   font-size: 1rem;
   margin-left: 8px;
 `;
+Label.displayName = 'Label';
 
 const StyledInput = styled.input`
   border-radius: 3px;
@@ -15,6 +16,7 @@ const StyledInput = styled.input`
   padding-left: 8px;
   width: 98%;
 `;
+StyledInput.displayName = 'StyledInput';
 
 
 const Input = (props) => {

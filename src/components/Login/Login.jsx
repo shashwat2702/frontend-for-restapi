@@ -44,7 +44,7 @@ const Login = () => {
   return(
     <LoginContainer>
       <FormTitle>Login</FormTitle>
-      <Input label='Email address' onBlur={setEmail} uniqueId='username'/>
+      <Input label='Email address' onBlur={setEmail} uniqueId='email-address'/>
       <Input label='Password' onBlur={setPassword} type='password' uniqueId='password'/>
       <ButtonContainer>
       <Button label='Login' onClick={onSubmit} />
