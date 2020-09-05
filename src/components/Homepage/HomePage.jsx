@@ -1,10 +1,18 @@
-import React from 'react'
+import React from 'react';
+import Login from '../Login/Login';
+import { Footer, Header, HeaderTitle, LoginContainer, PageContainer } from './HomePageStyles';
 
 const HomePage = () => {
   return (
-    <div>
-      Hello World
-    </div>
+    <PageContainer>
+      <Header>
+        <HeaderTitle>Library Portal</HeaderTitle>
+      </Header>
+      <LoginContainer>
+      <Login/>
+      </LoginContainer>
+      <Footer/>
+    </PageContainer>
   )
 };
 
