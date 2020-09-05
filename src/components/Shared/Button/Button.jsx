@@ -11,6 +11,7 @@ const StyledButton = styled.button`
   margin: 16px 0 16px 8px;
   width: 100%;
 `;
+StyledButton.displayName = 'StyledButton';
 
 const Button = (props) => {
   return (
