@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Input from '../Shared/Input/Input';
 import Button from '../Shared/Button/Button';
 import styled from 'styled-components';
@@ -26,19 +26,28 @@ const LoginContainer = styled.div`
   margin-top: 5rem;
   max-width: 400px;
   min-height: 250px;
-  min-width: 350px;
+  min-width: 360px;
   padding: 1rem;
+  padding-right: 2rem;
   width: 30%;
 `;
 
 const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const onSubmit = () => {
+    console.log('email', email);
+    console.log('password', password);
+  };
+
   return(
     <LoginContainer>
       <FormTitle>Login</FormTitle>
-      <Input uniqueId='username' label='Email address'/>
-      <Input uniqueId='password' label='Password' type='password'/>
+      <Input label='Email address' onBlur={setEmail} uniqueId='username'/>
+      <Input label='Password' onBlur={setPassword} type='password' uniqueId='password'/>
       <ButtonContainer>
-      <Button/>
+      <Button label='Login' onClick={onSubmit} />
       </ButtonContainer>
     </LoginContainer>
   )

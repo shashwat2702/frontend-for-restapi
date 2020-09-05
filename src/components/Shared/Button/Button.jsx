@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledButton = styled.button`
@@ -11,10 +12,15 @@ const StyledButton = styled.button`
   width: 100%;
 `;
 
-const Button = () => {
+const Button = (props) => {
   return (
-    <StyledButton>Login</StyledButton>
+    <StyledButton onClick={props.onClick}>{props.label}</StyledButton>
   )
+};
+
+Button.propTypes = {
+  label: PropTypes.oneOfType([PropTypes.element, PropTypes.string]).isRequired,
+  onClick: PropTypes.func.isRequired,
 };
 
 export default Button;
