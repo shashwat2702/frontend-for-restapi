@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import HomePage from '../components/Homepage/HomePage';
+import PageLayout from '../components/PageLayout/PageLayout';
 import Login from '../components/Login/Login';
 import Signup from '../components/Signup/Signup';
 
@@ -9,10 +9,10 @@ const Routes = () => {
     <BrowserRouter>
       <Switch>
         <Route path="/signup">
-        <HomePage><Signup/></HomePage>
+        <PageLayout><Signup/></PageLayout>
         </Route>
         <Route path="/login">
-          <HomePage><Login/></HomePage>
+          <PageLayout><Login/></PageLayout>
         </Route>
         <Route path="/protected">
           <p>Protected Path</p>
