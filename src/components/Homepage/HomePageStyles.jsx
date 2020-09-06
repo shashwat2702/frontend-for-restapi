@@ -21,9 +21,6 @@ export const HeaderTitle = styled.h1`
   text-align: center;
 `;
 
-export const LoginContainer = styled.div`
-  float: center;
-`;
 
 export const PageContainer = styled.div`
   background-color: #e6e6e6;

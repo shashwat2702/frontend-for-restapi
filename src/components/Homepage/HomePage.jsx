@@ -1,19 +1,21 @@
 import React from 'react';
-import Login from '../Login/Login';
-import { Footer, Header, HeaderTitle, LoginContainer, PageContainer } from './HomePageStyles';
+import PropTypes from 'prop-types';
+import { Footer, Header, HeaderTitle, PageContainer } from './HomePageStyles';
 
-const HomePage = () => {
+const HomePage = (props) => {
   return (
     <PageContainer>
       <Header>
         <HeaderTitle>Library Portal</HeaderTitle>
       </Header>
-      <LoginContainer>
-      <Login/>
-      </LoginContainer>
+      {props.children}
       <Footer/>
     </PageContainer>
   )
+};
+
+HomePage.propTypes = {
+  children: PropTypes.element.isRequired,
 };
 
 export default HomePage;
