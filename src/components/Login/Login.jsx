@@ -8,6 +8,7 @@ const ButtonContainer = styled.div`
   max-width: 300px;
   width: 80%;
 `;
+ButtonContainer.displayName = 'ButtonContainer';
 
 const FormTitle = styled.p`
   @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
@@ -16,6 +17,7 @@ const FormTitle = styled.p`
   font-weight: 700;
   text-align: center;
 `;
+FormTitle.displayName = 'FormTitle';
 
 const LoginContainer = styled.div`
   background-color: white;
@@ -31,6 +33,7 @@ const LoginContainer = styled.div`
   padding-right: 2rem;
   width: 30%;
 `;
+LoginContainer.displayName = 'LoginContainer';
 
 const Login = () => {
   const [email, setEmail] = useState('');
