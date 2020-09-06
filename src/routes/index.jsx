@@ -21,14 +21,16 @@ const PrivateRoute = (props) => {
 }
 
 const Routes = () => {
+  const apiAccessToken = getApiAccessToken();
+
   return (
     <BrowserRouter>
       <Switch>
         <Route path="/signup">
-        <PageLayout><Signup/></PageLayout>
+          {apiAccessToken ? <Redirect to='/protected'/> : (<PageLayout><Signup/></PageLayout>) }
         </Route>
         <Route path="/login">
-          <PageLayout><Login/></PageLayout>
+          {apiAccessToken ? <Redirect to='/protected'/> : (<PageLayout><Login/></PageLayout>) }
         </Route>
         <PrivateRoute to='/protected' />
         <Route>

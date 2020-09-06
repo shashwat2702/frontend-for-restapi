@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import Input from '../Shared/Input/Input';
 import Button from '../Shared/Button/Button';
 import styled from 'styled-components';
+import { postCall } from '../../utils/apiCaller';
+import { LOGIN_URL } from '../../utils/apiURL';
+import { setApiAccessToken } from '../../utils/tokenHelper';
 
 const ButtonContainer = styled.div`
   margin: 0 auto;
@@ -40,8 +43,9 @@ const Login = () => {
   const [password, setPassword] = useState('');
 
   const onSubmit = () => {
-    console.log('email', email);
-    console.log('password', password);
+    postCall(LOGIN_URL, {email, password}).then((response) => {
+      setApiAccessToken(response.token);
+    });
   };
 
   return(
